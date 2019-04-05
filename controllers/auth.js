@@ -43,9 +43,22 @@ exports.postLogin = function(req, res){
     })(req,res);
 };
 
-// exports.updateProfile = function(req, res){
+exports.updateProfile = function(req, res){
+    var acc = {
+        email: req.body.email,
+        name: req.body.name,
+        city: req.body.city,
+        phone: req.body.phone
+    };
+    account.findOneAndUpdate({username: req.user.username}, acc, function(err, result){
+        if(err){
+            console.log(err);
+        }
+        // console.log("RESULT: " + result);
+        return res.redirect('profile');
+    });
 
-// };
+};
 
 exports.getLogout = function(req, res){
     req.logout();

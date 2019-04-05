@@ -23,5 +23,6 @@ router.get('/update', function(req, res) {
     res.render('update', {user: req.user});
 });
 
-// router.post('/update', authController.updateProfile);
+router.post('/update', authController.updateProfile);
+
 module.exports = router;

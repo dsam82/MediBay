@@ -19,16 +19,4 @@ router.get('/register', function(req, res) {
 
 router.post('/register', authController.postRegister);
 
-// router.get('/auth/facebook', authController.fbLogin);
-
-// router.get('/auth/facebook/callback', authController.fbLoginCb);
-
-// router.get('/custom', problemController.getCustomTest);
-
-// router.get('/custom/live', function(req, res) {
-    // res.redirect('/custom');
-// });
-
-// router.post('/custom/live', problemController.postCustom_testLive);
-
 module.exports = router;

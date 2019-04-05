@@ -6,7 +6,6 @@ var accountSchema = new Schema({
     username: String,
     password: String,
     email: String,
-    perms: String,
     city: String,
     phone: String
 });

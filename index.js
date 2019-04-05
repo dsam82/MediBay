@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
+var profileRoute = require("./routes/profile");
 var expressSession = require('express-session');
 
 var port = process.env.PORT || config.serverPort;
@@ -45,3 +46,4 @@ passport.deserializeUser(account.deserializeUser());
 var indexRoute = require('./routes/index');
 
 app.use('/', indexRoute);
+app.use('/profile', profileRoute);

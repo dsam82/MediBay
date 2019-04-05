@@ -43,6 +43,10 @@ exports.postLogin = function(req, res){
     })(req,res);
 };
 
+// exports.updateProfile = function(req, res){
+
+// };
+
 exports.getLogout = function(req, res){
     req.logout();
     res.redirect('/');

@@ -5,7 +5,9 @@ exports.postRegister = function(req, res){
     var acc = new account({
         username: req.body.username,
         email: req.body.email,
-        permission: "user"
+        name: req.body.name,
+        city: req.body.city,
+        phone: req.body.phone
     });
     account.register(acc, req.body.password, function(err, user){
         if (err){

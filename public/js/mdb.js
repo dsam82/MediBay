@@ -75,6 +75,36 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
 */
+$(document).ready(function () {
+	if (window.location.toString().includes("market")){
+		console.log('1');
+		$('#2').addClass('active');
+		$('#1').removeClass('active');
+		$('#3').removeClass('active');
+		$('#4').removeClass('active');
+	}
+	else if (window.location.toString().includes("addlisting")){
+		console.log('2');
+		$('#3').addClass('active');
+		$('#1').removeClass('active');
+		$('#2').removeClass('active');
+		$('#4').removeClass('active');
+	}
+	else if (window.location.toString().includes("about")){
+		console.log('3');
+		$('#4').addClass('active');
+		$('#1').removeClass('active');
+		$('#2').removeClass('active');
+		$('#3').removeClass('active');
+	}
+	else {
+		console.log('4');
+		$('#1').addClass('active');
+		$('#2').removeClass('active');
+		$('#3').removeClass('active');
+		$('#4').removeClass('active');
+	}
+});
 
 // t: current time, b: begInnIng value, c: change In value, d: duration
 jQuery.easing['jswing'] = jQuery.easing['swing'];

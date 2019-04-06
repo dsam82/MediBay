@@ -21,11 +21,22 @@ exports.getSearch = function(req, res){
                 }
 
                 res.render('search', {
-                        user: req.user,
-                        city: city,
-                        medicine: med
+                    user: req.user,
+                    city: city,
+                    medicine: med
                 });
             });
         });
     });
 };
+
+exports.getImage = function (req, res){
+    var filename = req.params.picture;
+    medicine.findOne({_id: ObjectId(filename)}, function(err, medi){
+        if (err){
+            console.log(err);
+        }
+        res.setHeader('content-type', medi.image.contentType);
+        res.send(medi.image.img.buffer);
+    });
+}

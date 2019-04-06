@@ -1,7 +1,7 @@
 var medicine = require('../models/medicine');
-
+var fs = require('fs');
 exports.addListing = function(req, res){
-    console.log(req.body);
+    console.log(req);
     var med = new medicine({
         username: req.user.username,
         name: req.body.name,
@@ -19,7 +19,7 @@ exports.addListing = function(req, res){
         if (err) {
             console.log(err);
         }
-        console.log(medi.name);
+        console.log(medi._id);
     });
     res.render('profile', {user: req.user});
 };

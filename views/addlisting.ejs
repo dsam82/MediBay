@@ -17,60 +17,60 @@
 
 </head>
 <body>
-        <% include partials/header %>
-        <div class="container">
-            <% if (locals.user) { %>
-                <form class="text border border-light p-5" method="post" action="/addlisting">
-    
-                    <p class="h2 mb-4">Add New Medicine Sell Listing</p>
-    
-                    <!-- Username -->
-                    <h3 class ="mb-3"><%= user.username %></h3>
-    
-                    <!-- Name -->
-                    <p>Name Of Medicine</p>
-                    <input type="name" id="defaultUpdateFormname" class="form-control mb-4" name="name">
+    <% include partials/header %>
+    <div class="container">
+        <% if (locals.user) { %>
+            <form class="text border border-light p-5" method="post" action="/addlisting" enctype="multipart/form-data">
 
-                    <p>Description</p>
-                    <input type="description" id="defaultUpdateFormname" class="form-control mb-4" name="description">
-    
-                     <!-- Company -->
-                     <p>Brand Name</p>
-                     <input type="brand" id="defaultUpdateFormname" class="form-control mb-4" name="brand">
+                <p class="h2 mb-4">Add New Medicine Sell Listing</p>
 
-                     <p>Expiry Date</p>
-                     <input type="expiry" id="defaultUpdateFormname" class="form-control mb-4" name="expiry">
+                <!-- Username -->
+                <h3 class ="mb-3"><%= user.username %></h3>
 
-                    <!-- E-mail -->
-                    <p>MRP</p>
-                    <input type="mrp" id="defaultUpdateFormEmail" class="form-control mb-4" name="mrp">
+                <!-- Name -->
+                <p>Name Of Medicine</p>
+                <input type="name" id="defaultUpdateFormname" class="form-control mb-4" name="name">
 
-                    <p>Selling Price</p>
-                    <input type="sp" id="defaultUpdateFormEmail" class="form-control mb-4" name="sp">
+                <p>Description</p>
+                <input type="description" id="defaultUpdateFormname" class="form-control mb-4" name="description">
 
-                    <p>Medicine Generally Used To Cure?</p>
-                    <input type="use" id="defaultUpdateFormEmail" class="form-control mb-4" name="use">
+                    <!-- Company -->
+                    <p>Brand Name</p>
+                    <input type="brand" id="defaultUpdateFormname" class="form-control mb-4" name="brand">
 
-                    <p>Quantity in number of tablets/ mL</p>
-                    <input type="quantity" id="defaultUpdateFormEmail" class="form-control mb-4" name="quantity">
-    
-                    <p>Image</p>
-                    <input type="file" id="defaultUpdateFormEmail" class="form-control mb-4" name="image">
-                    <p>Prescription</p>
-                    <input type="file" id="defaultUpdateFormEmail" class="form-control mb-4" name="prescription">
-    
-                    <!-- Sign up button -->
-                    <button class="btn btn-info my-4 btn-block" type="submit">Create Listing</button>
-                    <hr>
-            <% } else { %>
-                <p>
-                    You are not a valid user. Please <a href="/register">Sign Up</a>
-                </p>
-                <p>Have an Account?
-                    <a href="/login">Sign In</a>
-                </p>
-            <% } %>
-        </div>
-        <% include partials/footer %>
+                    <p>Expiry Date</p>
+                    <input type="expiry" id="defaultUpdateFormname" class="form-control mb-4" name="expiry">
+
+                <!-- E-mail -->
+                <p>MRP</p>
+                <input type="mrp" id="defaultUpdateFormEmail" class="form-control mb-4" name="mrp">
+
+                <p>Selling Price</p>
+                <input type="sp" id="defaultUpdateFormEmail" class="form-control mb-4" name="sp">
+
+                <p>Medicine Generally Used To Cure?</p>
+                <input type="use" id="defaultUpdateFormEmail" class="form-control mb-4" name="use">
+
+                <p>Quantity in number of tablets/ mL</p>
+                <input type="quantity" id="defaultUpdateFormEmail" class="form-control mb-4" name="quantity">
+
+                <p>Image JPEG Link</p>
+                <input type="image_link" id="defaultUpdateFormEmail" class="form-control mb-4" name="image">
+                <p>Prescription JPEG Image Link</p>
+                <input type="prescription_link" id="defaultUpdateFormEmail" class="form-control mb-4" name="prescription">
+
+                <!-- Sign up button -->
+                <button class="btn btn-info my-4 btn-block" type="submit">Create Listing</button>
+                <hr>
+        <% } else { %>
+            <p>
+                You are not a valid user. Please <a href="/register">Sign Up</a>
+            </p>
+            <p>Have an Account?
+                <a href="/login">Sign In</a>
+            </p>
+        <% } %>
+    </div>
+    <% include partials/footer %>
 </body>
 </html>

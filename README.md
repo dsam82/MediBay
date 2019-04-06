@@ -1,7 +1,7 @@
 ## MediBay
 An online platform to buy and sell unused extra medicines created during TopCoder Hackathon 2019 IIT Mandi.
 
-Working video can be viewed [here](https://www.youtube.com/watch?v=zgWc6tJyRTY).
+Working video can be viewed [here](https://youtu.be/c1PqY7iemm8).
 
 ## Problem Solution
 People often have unused extra medicines at their homes. These medicines often get past their

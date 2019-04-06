@@ -3,10 +3,10 @@ var router = express.Router();
 
 var authController = require('../controllers/auth');
 var listingController = require('../controllers/listing');
+var indexController = require('../controllers/index');
+var searchController = require('../controllers/search');
 
-router.get('/', function(req, res) {
-    res.render('index', {user: req.user});
-});
+router.get('/', indexController.getIndex);
 
 router.get('/login', authController.getLogin);
 
@@ -36,8 +36,12 @@ router.get('/about', function(req, res) {
     res.render('about', {user: req.user});
 });
 
+router.get('/search', indexController.getIndex);
+
 router.post('/update', authController.updateProfile);
 
 router.post('/addlisting', listingController.addListing);
+
+router.post('/search', searchController.getSearch);
 
 module.exports = router;

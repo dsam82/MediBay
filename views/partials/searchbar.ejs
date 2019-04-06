@@ -1,0 +1,14 @@
+<h1 align="center">MediBay</h1>
+<div class="input-group md-form form-sm form-2 pl-0"></div>
+<form class="text-center border border-light p-5" method="post" action="/search">
+    
+        <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search" name="query">
+        <select class="mdb-select" name="city"> 
+        <option value="All India" selected>All India</option>  
+        <% for(var i=0; i < city.length; i++) { %>
+            <option value=<%= city[i] %> class="rounded-circle"><%= city[i] %></option>
+        <% } %>
+        </select>
+    <button type="submit" class="btn btn-info my-2 btn-block">Search</button>
+</form>
+</div>

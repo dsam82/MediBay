@@ -1,5 +1,4 @@
 var medicine = require('../models/medicine');
-const fs = require('fs');
 
 exports.addListing = function(req, res){
     console.log(req.body);

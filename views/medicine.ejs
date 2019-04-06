@@ -13,75 +13,68 @@
     <!-- Material Design Bootstrap -->
     <link href="../css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/medicine.css" rel="stylesheet">
 </head>
 
 <body>
     <% include partials/header %>
-        <div class="col mb-3">
-            <div class="profile-head">
-                <h3><%= medicine.name %>
-                </h3>
-                <a href="">
-                    <button class="btn btn-info my-2 btn-block" type="submit">Edit Profile</button>
-                </a>
-                <br> <br>
-            </div>
-        </div>
-        <div class="tab-pane" id="profile-details">
+        <div class="post-container" id="profile-details">
+            <p><span class="post-thumb" id="photo"><img src="<%= medicine.image %>"></span></p>
+            <div class="post-content" id="details">
+                    <p class="post-title"><a href="/medicine/<%= medicine._id %>"><span id="name"><%= medicine.name %></span></a></p>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>Name</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.username %></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>MRP</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.mrp %></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>Expiry</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.expiry %></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>Quantity</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.quantity %></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>Brand</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.brand %></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>Description</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.description %></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <label>Use</label>
                 </div>
-                <div class="col mb-4">
+                <div class="col mb-1">
                     <p><%= medicine.use %></p>
                 </div>
             </div>

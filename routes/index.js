@@ -5,6 +5,7 @@ var authController = require('../controllers/auth');
 var listingController = require('../controllers/listing');
 var indexController = require('../controllers/index');
 var searchController = require('../controllers/search');
+var medicineController = require('../controllers/medicine');
 
 router.get('/', indexController.getIndex);
 
@@ -41,5 +42,7 @@ router.post('/update', authController.updateProfile);
 router.post('/addlisting', listingController.addListing);
 
 router.post('/search', searchController.getSearch);
+
+router.get('/medicine/:id', medicineController.getMedicine);
 
 module.exports = router;

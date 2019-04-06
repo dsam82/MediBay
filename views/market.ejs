@@ -26,7 +26,7 @@
             <% for(var i = 0; i< medicine.length; i++) { %>
                 <hr>
                 <!-- <p><span id="photo"><image src="medicine[i].photo"></image></span></p> -->
-                <a href="/medicine"><span id="name"><%= medicine[i].name %></span></a>
+                <a href="/medicine/<%= medicine[i]._id %>"><span id="name"><%= medicine[i].name %></span></a>
                 <p><span id="sp"><%= medicine[i].sp %></span>
                     <span id="mrp"><strike><%= medicine[i].mrp %></strike></span></p>
                 <p><span id="quantity"><%= medicine[i].quantity %></span></p>

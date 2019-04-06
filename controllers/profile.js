@@ -1,7 +1,7 @@
 var medicine = require('../models/medicine');
 
 exports.getUserMedicine = function(req, res){
-    console.log(req.body);
+    console.log(req.user);
 
     medicine.find({username: req.user.username}, function(err, medi){
         if(err){

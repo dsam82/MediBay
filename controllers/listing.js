@@ -1,7 +1,7 @@
 var medicine = require('../models/medicine');
 var fs = require('fs');
 exports.addListing = function(req, res){
-    console.log(req);
+    console.log(req.body);
     var med = new medicine({
         username: req.user.username,
         name: req.body.name,

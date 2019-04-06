@@ -28,6 +28,14 @@ router.get('/addlisting', function(req, res) {
     res.render('addlisting', {user: req.user});
 });
 
+router.get('/market', function(req, res) {
+    res.render('market', {user: req.user});
+});
+
+router.get('/about', function(req, res) {
+    res.render('about', {user: req.user});
+});
+
 router.post('/update', authController.updateProfile);
 
 router.post('/addlisting', listingController.addListing);

@@ -2,6 +2,7 @@ var medicine = require('../models/medicine');
 const fs = require('fs');
 
 exports.addListing = function(req, res){
+    console.log(req.body);
     var med = new medicine({
         username: req.user.username,
         name: req.body.name,
@@ -12,7 +13,14 @@ exports.addListing = function(req, res){
         sp: req.body.sp,
         use: req.body.use,
         quantity: req.body.quantity,
-        image: String,
-        prescription: String
+        image: req.body.image,
+        prescription: req.body.prescription
     });
+    med.save(function(err, medi) {
+        if (err) {
+            console.log(err);
+        }
+        console.log(medi.name);
+    });
+    res.render('profile', {user: req.user});
 };

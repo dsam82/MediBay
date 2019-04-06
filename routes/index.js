@@ -41,7 +41,7 @@ router.post('/update', authController.updateProfile);
 
 router.post('/addlisting', listingController.addListing);
 
-router.post('/search', searchController.getSearch);
+router.post('/search', searchController.postSearch);
 
 router.get('/medicine/:id', medicineController.getMedicine);
 

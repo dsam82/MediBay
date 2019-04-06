@@ -17,28 +17,23 @@ exports.getSearch = function(req, res){
 };
 
 exports.postSearch = function(req, res){
+    console.log(req);
     if (req.body.city=="All India"){
-        
-    }
-    else{
-        account.find({city: req.body.city}, function(err, acc) {
-            if(err){
-                console.log(err);
-            }
-            console.log(acc);
-
-            medicine.find({name: req.body.query}, function(err, med){
-            console.log(med);
-            if(err){
-                console.log(err);
-            }
-
+        medicine.find({name: req.body.query}, function(err, medi){
             res.render('search', {
                 user: req.user,
-                city: city,
-                medicine: med
+                city: "All India",
+                medicine: medi
             });
         });
+    }
+    else{
+        medicine.find({name: req.body.query}, function(err, medi){
+            res.render('search', {
+                user: req.user,
+                city: "All India",
+                medicine: medi
+            });
         });
     }
 };

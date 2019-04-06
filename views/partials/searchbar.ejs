@@ -1,14 +1,16 @@
-<h1 align="center">MediBay</h1>
-<div class="input-group md-form form-sm form-2 pl-0"></div>
-<form class="text-center border border-light p-5" method="post" action="/search">
+<br><br>
+<h1 align="center" style="margin-bottom:-70px">MediBay</h1>
+<div class="input-group md-form form-sm form-2 pl-5"></div>
+<form class="text-center p-5" method="post" action="/search">
     
         <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search" name="query">
+        <br>
         <select class="mdb-select" name="city"> 
-        <option value="All India" selected>All India</option>  
+        <option value="All India" selected>All India</option>
         <% for(var i=0; i < city.length; i++) { %>
             <option value=<%= city[i] %> class="rounded-circle"><%= city[i] %></option>
         <% } %>
-        </select>
-    <button type="submit" class="btn btn-info my-2 btn-block">Search</button>
+        </select><br>
+    <button type="submit" class="btn btn-info my-2 ">Search</button>
 </form>
 </div>

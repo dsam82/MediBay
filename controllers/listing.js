@@ -21,7 +21,17 @@ exports.addListing = function(req, res){
         }
         console.log(medi._id);
     });
-    res.render('profile', {user: req.user});
+    medicine.find({username: req.user.username}, function(err, medi){
+        if(err){
+            console.log(err);
+        }
+
+        console.log(medi);
+        res.render('profile', {
+            user: req.user,
+            medicine: medi
+        });
+    });
 };
 
 exports.getListing = function(req, res){

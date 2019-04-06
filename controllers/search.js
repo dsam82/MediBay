@@ -12,7 +12,7 @@ exports.getSearch = function(req, res){
             if(err){
                 console.log(err);
             }
-            console.log(acc);
+            console.log(acc.username);
 
             medicine.find({name: req.body.query}, function(err, med){
                 console.log(med);

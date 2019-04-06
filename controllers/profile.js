@@ -15,3 +15,17 @@ exports.getUserMedicine = function(req, res){
         });
     });
 };
+
+exports.delUserMedicine = function(req, res){
+    console.log(req.user);
+
+    medicine.deleteOne({_id: req.params.id}, function(err) {
+        console.log(res);
+
+        if(err){
+            console.log(err);
+        }
+
+        res.redirect('back');
+    })
+}

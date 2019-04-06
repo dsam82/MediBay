@@ -18,7 +18,20 @@
 </head>
 <body>
         <% include partials/header %>
-        
+        <h1 align="center">MediBay</h1>
+        <div class="input-group md-form form-sm form-2 pl-0">
+            <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+            <select class="mdb-select" searchable="Search here..">
+                    <option value="1" disabled selected>Choose your option</option>
+                    <option value="2" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle">example
+                      1</option>
+                    <option value="3" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle">example
+                      2</option>
+                    <option value="4" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle">example
+                      1</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-info my-2 btn-block">Search</button>
         <% include partials/footer %>
 </body>
 </html>

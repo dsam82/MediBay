@@ -63,6 +63,14 @@
                         <p><%= user.city %></p>
                     </div>
                 </div>
+                <% for(var i = 0, i< user.medicine.length, i++) { %>
+                <div class="col mb-1">
+                   <li>
+                        <p id="medicineName">Name: <%= user.medicine[i].name %></p>
+                        <p id="medicinePrice">Price: <%= user.medicine[i].price %></p>
+                    </li>
+                </div>
+                <% } %>
             </div>
         <% } else { %>
             <p>

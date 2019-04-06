@@ -19,22 +19,21 @@
 <body>
     <% include partials/header %>
     <div class="container">
-    <% if (locals.user) { %>
-        <div class="col mb-3">
+        <div class="col mb-1">
             <p id="market-head">
                 Click to open and Request the medicine.
             </p>
-            Marketplace
+            <% for(var i = 0; i< medicine.length; i++) { %>
+                <hr>
+                <!-- <p><span id="photo"><image src="medicine[i].photo"></image></span></p> -->
+                <p><span id="name"><%= medicine[i].name %></span></p>
+                <p><span id="sp"><%= medicine[i].sp %></span>
+                    <span id="mrp"><strike><%= medicine[i].mrp %></strike></span></p>
+                <p><span id="quantity"><%= medicine[i].quantity %></span></p>
+                <p><span id="expiry"><%= medicine[i].expiry %></span></p>
+            <% } %>
         </div>
-    <% } else { %>
-        <p>
-            You are not a valid user. Please <a href="/register">Sign Up</a>
-        </p>
-        <p>Have an Account?
-            <a href="/login">Sign In</a>
-        </p>
-    <% } %>
-</div>
+    </div>
     <% include partials/footer %>
 </body>
 </html>

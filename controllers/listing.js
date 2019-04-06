@@ -23,3 +23,21 @@ exports.addListing = function(req, res){
     });
     res.render('profile', {user: req.user});
 };
+
+exports.getListing = function(req, res){
+    medicine.find({}, function(err, med) {
+
+        // med.sort(function(a,b){
+        //     return a.createdAt - b.createdAt;
+        // });
+        console.log(med);
+
+        if(err){
+            console.log(err);
+        }
+        res.render('market', {
+            user: req.user,
+            medicine: med
+        });
+    });
+};

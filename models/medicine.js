@@ -11,8 +11,8 @@ var medicineSchema = new Schema({
     sp: String,
     use: String,
     quantity: String,
-    image: Buffer,
-    prescription: Buffer
+    image: { content: Buffer, contentType: String },
+    prescription: { content: Buffer, contentType: String }
 },
 {
     timestamps: true

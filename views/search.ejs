@@ -13,7 +13,7 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/market.css" rel="stylesheet">
 
 </head>
 <body>
@@ -25,13 +25,17 @@
                     Click to open and Request the medicine.
                 </p>
                 <% for(var i = 0; i< medicine.length; i++) { %>
-                    <hr>
-                    <p><span id="photo"><img src="<%= medicine[i].image %>"></image></span></p>
-                    <a href="/medicine/<%= medicine[i]._id %>" ><span id="name"><%= medicine[i].name %></span></a>
-                    <p><span id="sp"><%= medicine[i].sp %></span>
-                        <span id="mrp"><strike><%= medicine[i].mrp %></strike></span></p>
-                    <p><span id="quantity"><%= medicine[i].quantity %></span></p>
-                    <p><span id="expiry"><%= medicine[i].expiry %></span></p>
+                    <div class="post-container">
+                            <hr>
+                            <p><span class="post-thumb" id="photo"><img src="<%= medicine[i].image %>"></span></p>
+                            <div class="post-content" id="details">
+                                <p class="post-title"><a href="/medicine/<%= medicine[i]._id %>"><span id="name"><%= medicine[i].name %></span></a></p>
+                                <p>Selling Price: <span id="sp"><%= medicine[i].sp %></span>
+                                    <span id="mrp"><strike><%= medicine[i].mrp %></strike></span></p>
+                                <p>Quantity: <span id="quantity"><%= medicine[i].quantity %></span></p>
+                                <p>Expiry Date: <span id="expiry"><%= medicine[i].expiry %></span></p>
+                            </div>
+                        </div>
                 <% } %>
             </div>
         </div>
